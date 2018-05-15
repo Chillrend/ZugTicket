@@ -1,0 +1,48 @@
+
+/* Required for full background image */
+
+html,
+body,
+header,
+.jarallax {
+  height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .jarallax {
+    height: 100vh;
+  }
+}
+
+.top-nav-collapse {
+  background-color: #FFF !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: transparent !important;
+}
+
+@media (max-width: 768px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #FFF !important;
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #FFF !important;
+  }
+}
+.form-inline{
+    color: #000 !important;
+}
+
+h5 {
+  letter-spacing: 3px;
+}
+nav a{
+    color: #000 !important;
+    font-weight: 400 !important;
+}
