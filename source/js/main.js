@@ -1,7 +1,6 @@
  $(document).ready(function () {
      $('.mdb-select').material_select();
-     $('.dropdown-toggle').dropdown();
-     $('.datepicker').pickadate();
+     $('.dropdown-toggle').dropdown()
  });
- 
-
+ // Data Picker Initialization
+ $('.datepicker').pickadate();
