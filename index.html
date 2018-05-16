@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <title>COBA</title>
     <link rel="stylesheet" href="source/css/main.css">
-    <link rel="stylesheet" href="source/css/mdb.min.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="source/css/mdb.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -38,7 +40,21 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Profile</a>
           </li>
-        </ul>                       
+        </ul> 
+        <div class="dropdown">
+            <button class="btn btn-sm btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" data-target="#dropData" aria-haspopup="true" aria-expanded="false">Check Booking Status</button>
+            <div class="dropdown-menu" id="dropData" aria-labelledby="dropdownMenuButton">
+                <form class="px-2 py-1" action="">
+                    <div class="form-group">
+                        <label for="bookFormSearch">Booking Code</label>
+                        <input type="text" class="form-control" id="bookFormSearch" placeholder="Type your code">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-sm btn-danger" type="submit">Search</button>
+                    </div>
+            </form>
+          </div>
+        </div>                    
       </div>
     </div>
   </nav>
@@ -136,12 +152,126 @@
                 </div>
             </form>
         </div>
-    </main>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="source/js/mdb.min.js"></script>
+        </main>
+        <!-- Section: Products v.4 -->
+        <div class="view jarallax intro-2" data-jarallax='{"speed": 0.2}' style="background-image: url(https://www.bahn.com/en/view/mdb/pv/agenturservice/2014/expi-nl_06_14/mdb_155787_db15663_1240x620_cp_0x243_1240x863.jpg); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <div class="mask rgba-white-slight">
+        <div class="container">
+        <section class="text-center my-5">
+
+            <!-- Section heading -->
+            <h2 class="h1-responsive font-weight-bold text-center my-5">Bahn Services</h2>
+            <!-- Section description -->
+            <p class="h5-responsive text-center w-responsive red-border mx-auto mb-5" style="font-weight: 200;">Book your Bahn Pass for unlimited train rides for a period of time !</p>
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
+                    <!-- Collection card -->
+                    <div class="card collection-card z-depth-1-half">
+                        <!-- Card image -->
+                        <div class="view zoom">
+                            <img src="source/image/ice_train.jpg" class="img-fluid" alt="">
+                            <div class="stripe red">
+                                <a>
+                                    <p>ICE Bahn Pass
+                                        <i class="fa fa-angle-right"></i>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Card image -->
+                    </div>
+                    <!-- Collection card -->
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
+                    <!-- Collection card -->
+                    <div class="card collection-card z-depth-1-half">
+                        <!-- Card image -->
+                        <div class="view zoom">
+                            <img src="source/image/hamburg_train.jpg" class="img-fluid" alt="">
+                            <div class="stripe white">
+                                <a>
+                                    <p>Hamburg Pass
+                                        <i class="fa fa-angle-right"></i>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Card image -->
+                    </div>
+                    <!-- Collection card -->
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-lg-3 col-md-6 mb-md-0 mb-4">
+                    <!-- Collection card -->
+                    <div class="card collection-card z-depth-1-half">
+                        <!-- Card image -->
+                        <div class="view zoom">
+                            <img src="source/image/berlin_train.jpg" class="img-fluid" alt="">
+                            <div class="stripe red">
+                                <a>
+                                    <p>Berlin Pass
+                                        <i class="fa fa-angle-right"></i>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Card image -->
+                    </div>
+                    <!-- Collection card -->
+                </div>
+                <!-- Grid column -->
+
+                <!-- Fourth column -->
+                <div class="col-lg-3 col-md-6">
+                    <!-- Collection card -->
+                    <div class="card collection-card z-depth-1-half">
+                        <!-- Card image -->
+                        <div class="view zoom">
+                            <img src="source/image/allroute_train.jpg" class="img-fluid" alt="">
+                            <div class="stripe white">
+                                <a>
+                                    <p>All-route Pass
+                                        <i class="fa fa-angle-right"></i>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Card image -->
+                    </div>
+                    <!-- Collection card -->
+                </div>
+                <!-- Fourth column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </section>
+        </div>
+        </div>
+        </div>
+        <!-- Section: Products v.4 -->
+    
+    <!-- JQuery -->
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="source/js/mdb.min.js" type="text/javascript"></script>
+    <!-- Bootstrap core JavaScript -->
+
+
     <script src="source/js/main.js"></script>
+
 </body>
 
 </html>

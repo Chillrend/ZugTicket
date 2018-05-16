@@ -46,3 +46,6 @@ nav a{
     color: #000 !important;
     font-weight: 400 !important;
 }
+.red-border{
+    text-shadow: -1px 0 #F44336, 0 0.3px #F44336, 0.3px 0 #F44336, 0 -1px #F44336;
+}
