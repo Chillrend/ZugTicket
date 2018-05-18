@@ -15,3 +15,8 @@ Bugfix :
 
 New :
 + Added Sign-up Page
++ Added CRUD Template
+
+=======
+we use Bootstrap and material design bootstrap framework.
+for a list of css and js component please go here https://mdbootstrap.com/components/
