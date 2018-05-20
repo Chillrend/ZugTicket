@@ -1,22 +1,16 @@
 # ZugTicket
 Site for project Q4M2
 
-TOLONG KALO MAU PULL, JANGAN KE MASTER DULU, BIKIN BRANCH BARU AJA
+Reservation stuff
+dynamic form with step, use jquery to do this stuff atm
 
-Changelog :
-+ Added a card section to show Train Pass.
-+ Added a feature section to index
-+ Added footer
-+ Added sign-in Modal
+when it comes to JSP/PHP, AJAX/Angular are required.
 
-Bugfix :
-- Fixed the dropdown issue, still a little buggy, but usable.
-- Removed the dropdown finally, changed with sign-in Modal.
+already do:
+working experiment with jquery.
+gret interfeses.
 
-New :
-+ Added Sign-up Page
-+ Added CRUD Template
+already yesn't/bug/lazystuff:
+- still use jarallax, i am expecting display unresponsiveness.
+- i havent found the way to animate the text (unnecessary)
 
-=======
-we use Bootstrap and material design bootstrap framework.
-for a list of css and js component please go here https://mdbootstrap.com/components/

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" class="full-height">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Deutsche Bahn</title>
+    <link rel="stylesheet" href="source/css/index.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="source/css/mdb.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Main navigation -->
+    <header>
+        <!--Navbar-->
+        <strong>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar black-text">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="source/image/30%20dblogo.png" height="30" alt="" class="d-inline-block align-top"> Deutsche Bahn </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Facilities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Book Ticket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                </ul>
+                <div class="text-center">
+                    <a href="" class="btn btn-danger btn-rounded" data-toggle="modal" data-target="#darkModalForm">Sign In</a>
+                </div>
+            </div>
+        </nav> 
+        </strong>
+        <!-- Navbar -->
+        <!-- Full Page Intro -->
+        <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-color:white; background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-white-light d-flex justify-content-center align-items-center">
+                <!-- Content -->
+                <div class="container">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!--Grid column-->
+                        <div class="col-md-12 white-text text-center">
+                            
+                            <h1 class="display-3 mb-0 pt-md-5 pt-5 black-text font-weight-bold wow" id="titel" data-wow-delay="0.3s">Ticket <a class="red-text font-weight-bold">Reservation</a> </h1>
+<!-- Stepper --> 
+
+                            
+                        </div>
+
+                        <!--Grid column-->
+                    </div>
+                    <p>&nbsp;</p>
+                    <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8 steps-form-2 white-text text-center">
+                            <div class="steps-row-2 reserve d-flex justify-content-between">
+                                <div class="steps-step-2">
+                                    <a href="#step-1" type="button" class="btn btn-amber btn-circle-2 waves-effect ml-0" data-toggle="tooltip" data-placement="top" title="New/Existing Account"><i class="fa fa-user" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="steps-step-2">
+                                    <a href="#step-2" type="button" class="btn btn-blue-grey btn-circle-2 waves-effect" data-toggle="tooltip" data-placement="top" title="Personal Data"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="steps-step-2">
+                                    <a href="#step-3" type="button" class="btn btn-blue-grey btn-circle-2 waves-effect" data-toggle="tooltip" data-placement="top" title="Ticket Select"><i class="fa fa-ticket" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="steps-step-2">
+                                    <a href="#step-4" type="button" class="btn btn-blue-grey btn-circle-2 waves-effect mr-0" data-toggle="tooltip" data-placement="top" title="Checkout"><i class="fa fa-credit-card" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                            <p>&nbsp;</p><h3 class="black-text shit" id="shit" data-wow-delay="2s">Do you have an account?</h3>
+                            <form role="form" action="" method="post">
+                            <div class="wow shitbrix" id="step-1" data-wow-delay="0.3s"> <a class="btn btn-red btn-lg">I have an Account</a> 
+                                <button class="btn btn-lg btn-white lanjut" type="button">New Reservation</button> </div>
+                            <div class="wow shitbrix" id="step-2">
+                                    <div class="col-md-12">
+                                        <h3 class="font-weight-bold pl-0 my-4"><strong>Personal Data</strong></h3>
+                                        <div class="form-group md-form">
+                                            <label for="yourName-2" data-error="wrong" data-success="right">First Name</label>
+                                            <input id="yourName-2" type="text" required="required" class="form-control validate">
+                                        </div>
+                                        <div class="form-group md-form mt-3">
+                                            <label for="secondName-2" data-error="wrong" data-success="right">Second Name</label>
+                                            <input id="secondName-2" type="text" required="required" class="form-control validate">
+                                        </div>
+                                        <div class="form-group md-form">
+                                            <label for="surname-2" data-error="wrong" data-success="right">Surname</label>
+                                            <input id="surname-2" type="text" required="required" class="form-control validate">
+                                        </div>
+                                        <div class="form-group md-form mt-3">
+                                            <label for="yourAddress-2" data-error="wrong" data-success="right">Address</label>
+                                            <textarea id="yourAddress-2" type="text" required="required" rows="2" class="md-textarea validate form-control"></textarea>
+                                        </div>
+                                        <button class="btn btn-mdb-color btn-rounded balik float-left" type="button">Previous</button>
+                                        <button class="btn btn-mdb-color btn-rounded lanjut float-right" type="button">Next</button>
+                                    </div>
+                                </div>
+                            
+                        </form>
+                    </div>
+                    <script>
+                        
+                
+        $('#titel').addClass('animated fadeInUp');
+        $('#titel').one('webkitAnimationEnd animationend',$('#shit').addClass('animated fadeInUp') );
+        $('#shit').one('webkitAnimationEnd animationend',$('#step-1').addClass('animated fadeInUp') );
+        $('#step-1').one('webkitAnimationEnd animationend',$('#step-2').addClass('animated fadeInUp') );
+// Tooltips Initialization
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+// Steppers                
+$(document).ready(function () {
+  var navListItems = $('div.reserve div a'),
+          allWells = $('.shitbrix'),
+          allNextBtn = $('.lanjut'),
+          allPrevBtn = $('.balik');
+
+  allWells.hide();
+
+  navListItems.click(function (e) {
+      e.preventDefault();
+      var $target = $($(this).attr('href')),
+              $item = $(this);
+
+      if (!$item.hasClass('disabled')) {
+          navListItems.removeClass('btn-amber').addClass('btn-blue-grey');
+          $item.addClass('btn-amber');
+          allWells.hide();
+          $target.show();
+          $target.find('input:eq(0)').focus();
+      }
+      
+  });
+  
+  allPrevBtn.click(function(){
+      var curStep = $(this).closest(".shitbrix"),
+          curStepBtn = curStep.attr("id"),
+          shitext = $('#shit'),
+          prevStepSteps = $('div.reserve div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
+          switch(curStepBtn) {
+        case 'step-2': 
+        shitext.fadeToggle();
+        shitext.fadeIn();
+            shitext.text("Do you have an Account?");
+
+		break;
+        case 'step-3': 
+        shitext.fadeToggle();
+        shitext.fadeIn();
+            shitext.text("Ticket Selection");
+		break;
+        case 'step-4': 
+            shitext.text("Checkout");
+		break;
+
+      }
+          prevStepSteps.removeAttr('disabled').trigger('click');
+  });
+
+  allNextBtn.click(function(){
+      var curStep = $(this).closest(".shitbrix"),
+          curStepBtn = curStep.attr("id"),
+          shitext = $('#shit'),
+          nextStepSteps = $('div.reserve div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+          curInputs = curStep.find("input[type='text'],input[type='url']"),
+          isValid = true;
+          switch(curStepBtn) {
+            case 'step-1': 
+            shitext.fadeToggle();
+            shitext.fadeIn();
+            shitext.text("Personal Information");
+		break;
+        case 'step-2': 
+        shitext.fadeToggle();
+        shitext.fadeIn();
+            shitext.text("Ticket Selection");
+		break;
+        case 'step-3': 
+            shitext.text("Checkout");
+		break;
+
+
+      }
+
+      $(".form-group").removeClass("has-error");
+      for(var i=0; i< curInputs.length; i++){
+          if (!curInputs[i].validity.valid){
+              isValid = false;
+              $(curInputs[i]).closest(".form-group").addClass("has-error");
+          }
+      }
+
+      if (isValid)
+          nextStepSteps.removeAttr('disabled').trigger('click');
+  });
+
+  $('div.reserve div a.btn-amber').trigger('click');
+});
+                        
+                        </script>
+                    <div class="col-md-2"></div>
+                    <!--Grid row-->
+                </div>
+                <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+        </div>
+        <!-- Full Page Intro -->
+    </header>
+    <!-- Main navigation -->
+    <!--Main Navigation-->
+    <!--Main Layout-->
+
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="source/js/mdb.min.js" type="text/javascript"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="source/js/main.js"></script>
+</body>
+
+</html>
