@@ -71,3 +71,21 @@ nav{
 .modal-dialog,.form-dark{
     z-index: 2000;
 }
+.bordering{
+    border-radius: 5px;
+    border: 1px solid black !important;
+}
+.blockquote .bq-title{
+    font-size: 1rem !important;
+}
+.blockquote p{
+    font-size: 1rem !important;
+}
+.chip.chip-lg {
+    height: 52px;
+    line-height: 52px;
+    border-radius: 26px;
+}
+.md-form input:invalid{
+    border-bottom-color: #F44336 !important;
+}
