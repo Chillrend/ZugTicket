@@ -45,10 +45,12 @@
         </strong>
         <!-- Navbar -->
         <!-- Full Page Intro -->
-        <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-color:white; background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <!-- <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-color:white; background-repeat: no-repeat; background-size: cover; background-position: center center;"> -->
             <!-- Mask & flexbox options-->
-            <div class="mask rgba-white-light d-flex justify-content-center align-items-center">
+            <!-- <div class="mask rgba-white-light d-flex justify-content-center align-items-center"> -->
                 <!-- Content -->
+                <div class="row mt-5"></div>
+                <div class="row mt-5"></div>
                 <div class="container">
                     <!--Grid row-->
                     <div class="row">
@@ -67,7 +69,7 @@
                     <div class="row">
                             <div class="col-md-2"></div>
                             <div class="col-md-8 steps-form-2 white-text text-center">
-                            <div class="steps-row-2 reserve d-flex justify-content-between">
+                            <div class="steps-row-2 reserve d-flex justify-content-between disabled">
                                 <div class="steps-step-2">
                                     <a href="#step-1" type="button" class="btn btn-amber btn-circle-2 waves-effect ml-0" data-toggle="tooltip" data-placement="top" title="New/Existing Account"><i class="fa fa-user" aria-hidden="true"></i></a>
                                 </div>
@@ -82,42 +84,280 @@
                                 </div>
                             </div>
                             <p>&nbsp;</p><h3 class="black-text shit" id="shit" data-wow-delay="2s">Do you have an account?</h3>
-                            <form role="form" action="" method="post">
+                            <form role="form" action="" method="post" id="payment" onsubmit="return validateDate()">
                             <div class="wow shitbrix" id="step-1" data-wow-delay="0.3s"> <a class="btn btn-red btn-lg">I have an Account</a> 
                                 <button class="btn btn-lg btn-white lanjut" type="button">New Reservation</button> </div>
-                            <div class="wow shitbrix" id="step-2">
+                            <div class="wow shitbrix black-text" id="step-2">
                                     <div class="col-md-12">
-                                        <h3 class="font-weight-bold pl-0 my-4"><strong>Personal Data</strong></h3>
-                                        <div class="form-group md-form">
-                                            <label for="yourName-2" data-error="wrong" data-success="right">First Name</label>
-                                            <input id="yourName-2" type="text" required="required" class="form-control validate">
+                                            <blockquote class="blockquote bq-warning">
+                                                <p class="bq-title" style="font-size: 1rem;"><i class="fa fa-warning"></i> Heads up!</p>
+                                                <p style="font-size: 1rem;">Passenger details must be written as on ID card/passport/driving license.<br> Passenger details cannot be changed after leaving this page, double-check!</p>
+                                            </blockquote>
                                         </div>
-                                        <div class="form-group md-form mt-3">
-                                            <label for="secondName-2" data-error="wrong" data-success="right">Second Name</label>
-                                            <input id="secondName-2" type="text" required="required" class="form-control validate">
-                                        </div>
-                                        <div class="form-group md-form">
-                                            <label for="surname-2" data-error="wrong" data-success="right">Surname</label>
-                                            <input id="surname-2" type="text" required="required" class="form-control validate">
-                                        </div>
-                                        <div class="form-group md-form mt-3">
-                                            <label for="yourAddress-2" data-error="wrong" data-success="right">Address</label>
-                                            <textarea id="yourAddress-2" type="text" required="required" rows="2" class="md-textarea validate form-control"></textarea>
-                                        </div>
-                                        <button class="btn btn-mdb-color btn-rounded balik float-left" type="button">Previous</button>
-                                        <button class="btn btn-mdb-color btn-rounded lanjut float-right" type="button">Next</button>
-                                    </div>
+                                        <h5 class="mb-5 ml-0">Passenger #1</h5>
+                                        <div class="row">
+                                                <div class="col-md-4 pt-3">
+                                                    <select class="mdb-select">
+                                                        <option value="1" selected>Mr.</option>
+                                                        <option value="2">Mrs.</option>
+                                                        <option value="3">Miss</option>
+                                                    </select>
+                                                    <label>Title</label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="md-form form-group">
+                                                        <input type="text" class="form-control" id="inputname1" placeholder="Full Name">
+                                                        <label for="inputname1">Name</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+       
+                                            <!--IDENTITY-->
+                                            <div class="row">
+                                                    <div class="col-md-4 pt-3">
+                                                        <select class="mdb-select">
+                                                            <option value="1" selected>KTP/Govt. ID</option>
+                                                            <option value="2">SIM/Driving License</option>
+                                                            <option value="3">Passport</option>
+                                                            <option value="3">Other</option>
+                                                        </select>
+                                                        <label>ID Type</label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="md-form form-group">
+                                                            <input type="text" class="form-control" id="inputid1" placeholder="Type your ID Number">
+                                                            <label for="inputid1">ID Number</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-1"></div>
+                                            <button class="btn btn-mdb-color btn-rounded balik float-left" type="button">Previous</button>
+                                            <button class="btn btn-mdb-color btn-rounded lanjut float-right" type="button">Next</button>
                                 </div>
                             
+
+
+
+                              
+                           
+                                </div>
+                                <div class="col-md-12 steps-form-2 white-text text-center">
+                                <div class="wow shitbrix black-text" id="step-3">
+                                        <table class="table table-responsive-md">
+
+                                                <!--Table head-->
+                                                <thead class="red lighten-2">
+                                                    <tr>
+                                                        <th>Select</th>
+                                                        <th>#</th>
+                                                        <th>Train Number</th>
+                                                        <th class="th-sm">Train Name</th>
+                                                        <th class="th-sm">From</th>
+                                                        <th class="th-sm">To</th>
+                                                        <th class="th-sm">Departure Date</th>
+                                                        <th class="th-sm">Departure Time</th>
+                                                        <th class="th-sm">Price</th>
+                                                    </tr>
+                                                </thead>
+                                                <!--Table head-->
+                                    
+                                                <!--Table body-->
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" class="filled-in" id="checkbox125">
+                                                            <label for="checkbox125" class="label-table"></label>
+                                                        </td>
+                                                        <th scope="row">1</th>
+                                                        <td>No. 14223</td>
+                                                        <td>Nambo Jaya</td>
+                                                        <td>Nambo</td>
+                                                        <td>London</td>
+                                                        <td>09 - July - 2018</td>
+                                                        <td>14:30:00</td>
+                                                        <td>EUR 1400</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" class="filled-in" id="checkbox126">
+                                                            <label for="checkbox126" class="label-table"></label>
+                                                        </td>
+                                                        <th scope="row">1</th>
+                                                        <td>No. 14223</td>
+                                                        <td>Nambo Jaya</td>
+                                                        <td>Nambo</td>
+                                                        <td>London</td>
+                                                        <td>09 - July - 2018</td>
+                                                        <td>14:30:00</td>
+                                                        <td>EUR 1400</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="checkbox" class="filled-in" id="checkbox127">
+                                                            <label for="checkbox127" class="label-table"></label>
+                                                        </td>
+                                                        <th scope="row">1</th>
+                                                        <td>No. 14223</td>
+                                                        <td>Nambo Jaya</td>
+                                                        <td>Nambo</td>
+                                                        <td>London</td>
+                                                        <td>09 - July - 2018</td>
+                                                        <td>14:30:00</td>
+                                                        <td>EUR 1400</td>
+                                                    </tr>
+                                                </tbody>
+                                                <!--Table body-->
+                                    
+                                    
+                                            </table>
+                                            <button class="btn btn-mdb-color btn-rounded balik float-left" type="button">Previous</button>
+                                            <button class="btn btn-mdb-color btn-rounded lanjut float-right" type="button">Next</button>
+                                    </div>
+                                 </div>
+                                      
+                                 <div class="container mt-5 mb-5">
+                                        <!-- Extended material form grid -->
+
+                                        <!-- Horizontal Steppers -->
+
+                                        <!-- /.Horizontal Steppers -->
+                                        
+                                        <div class="wow shitbrix" id="step-4">
+
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <select class="mdb-select">
+                                                        <option value="1" selected>Germany</option>
+                                                        <option value="2">International</option>
+                                                    </select>
+                                                        <label>Country</label>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label>Credit Details</label>  
+                                                        <div class="md-form form-group">  
+                                                            <input type="text" class="form-control" id="inputcc" pattern="[0-9].{7,7}" required title="Enter Your 8 Digit Card Number">
+                                                            <label for="inputcc" pattern="[0-9].{7,7}" required title="Enter Your 8 Digit Card Number">Card Number</label>
+                                                            <div class="pt-2">
+                                                                <img src="source/image/200px-Mastercard-logo.svg.png" width="37px" alt="" class="img-fluid">&nbsp;
+                                                                <img src="source/image/deutsche-bank-logo.png" width="37px" alt="" class="img-fluid">&nbsp;
+                                                                <img src="source/image/discover200.png" width="37px" alt="" class="img-fluid">&nbsp;
+                                                                <img src="source/image/amex200.png" width="37px" alt="" class="img-fluid">&nbsp;
+                                                                <img src="source/image/Former_Visa_(company)_logo.svg.png" width="37px" alt="" class="img-fluid">&nbsp;
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                
+                                                    <div class="col-md-6">
+                                                            <label>Contact Information</label>
+                                                            <div class="md-form form-group">
+                                                                <input type="text" class="form-control" id="inputaddr" required>
+                                                                <label for="inputaddr">Billing Address</label>
+                                                            </div>
+                                                            <div class="md-form form-group" id="custom">
+                                                                    <input type="text" class="form-control" id="inputphone" title="Phone number must match this pattern: 000-000-0000" required pattern="[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}">
+                                                                    <label for="inputphone">Phone</label>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="md-form form-group">
+                                                            <input type="text" id="expdate" class="form-control datepicker" required title="Pick any date in the month your card expires">
+                                                            <label for="expdate">Expiration Date</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="md-form form-group">
+                                                            <input type="text" class="form-control" id="inputcvv" pattern="[0-9].{3,3}" required title="Check your CVV Number on the back of your card">
+                                                            <label for="inputcvv">CVV/CSC</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                            <div class="md-form form-group">
+                                                                <input type="email" class="form-control" id="inputemail" required>
+                                                                <label for="inputemail">E-mail</label>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <div class="md-form form-group">
+                                                            <input type="text" class="form-control" id="inputfname" pattern="[a-zA-Z' ]+" required>
+                                                            <label for="inputfname">First Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="md-form form-group">
+                                                            <input type="text" class="form-control" id="inputlname" pattern="[a-zA-Z' ]+" required>
+                                                            <label for="inputlname">Last Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                            <img src="source/image/comodo-secure-logo-new.png" alt="" width="75px" class="img-fluid">
+                                                            <img src="source/image/mcafee-secure-ic_0.jpg" alt="" width="75px" class="img-fluid">
+                                                            <img src="source/image/norton_secured_seal-big.png" alt="" width="75px" class="img-fluid">
+                                                            <img src="source/image/geotrust_secure.svg" alt="" width="75px" class="img-fluid">
+                                                        </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <div class="md-form form-group">
+                                                            <input type="text" class="form-control" id="inputzip" pattern="[0-9].{4,4}" required title="Type your zip code ex: 16914">
+                                                            <label for="inputzip">Zip Code</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="md-form form-group">
+                                                            <input type="text" class="form-control" id="inputstate" required pattern="[A-Z][A-Za-z' -]+">
+                                                            <label for="inputstate">State</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                            <button class="btn btn-mdb-color btn-rounded balik float-left" type="button">Previous</button>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                            
+                                                            <button class="btn btn-mdb-color btn-rounded lanjut float-right" type="submit">Checkout</button>
+      
+                                                    </div>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                        <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                                        <button id="fixed-action-btn" type="button" class="btn btn-floating btn-large red" data-toggle="modal" data-target="#modalCart"><i class="fa fa-shopping-cart"></i></button>
+                                        </div>
+                                    </div>
+
+
                         </form>
                     </div>
-                    <script>
+    
+                    <div class="col-md-2"></div>
+                    <!--Grid row-->
+                </div>
+                <!-- Content -->
+            </div>
+        <!-- </div> -->
+        <!-- </div> -->
+    </header>
+    <!-- Main navigation -->
+    <!--Main Navigation-->
+    <!--Main Layout-->
+
+    <script>
                         
                 
         $('#titel').addClass('animated fadeInUp');
         $('#titel').one('webkitAnimationEnd animationend',$('#shit').addClass('animated fadeInUp') );
         $('#shit').one('webkitAnimationEnd animationend',$('#step-1').addClass('animated fadeInUp') );
-        $('#step-1').one('webkitAnimationEnd animationend',$('#step-2').addClass('animated fadeInUp') );
+        $('#step-1').one('webkitAnimationEnd animationend',$('#step-2').addClass('animated fadeInRight') );
+        $('#step-2').one('webkitAnimationEnd animationend',$('#step-3').addClass('animated fadeInRight') );
+        $('#step-3').one('webkitAnimationEnd animationend',$('#step-4').addClass('animated fadeInRight') );
 // Tooltips Initialization
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
@@ -213,20 +453,6 @@ $(document).ready(function () {
 });
                         
                         </script>
-                    <div class="col-md-2"></div>
-                    <!--Grid row-->
-                </div>
-                <!-- Content -->
-            </div>
-            <!-- Mask & flexbox options-->
-        </div>
-        <!-- Full Page Intro -->
-    </header>
-    <!-- Main navigation -->
-    <!--Main Navigation-->
-    <!--Main Layout-->
-
-
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
     <!-- Bootstrap tooltips -->
