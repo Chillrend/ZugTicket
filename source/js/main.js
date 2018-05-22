@@ -79,3 +79,35 @@ zipvalid.addEventListener("input", function (event) {
          zipvalid.setCustomValidity("");
      }
  });
+var countersel = 1;
+    function addpass(){
+        // $('.mdb-select').material_select('destroy');
+        if (countersel == 4) {
+            $('#addanother').text("Limit Reached");
+            $('#addanother').addClass("disabled");
+        }
+        
+        countersel++;
+        $('#passenjer').append("<div class=entry" + countersel + "><p>&nbsp;</p><h5 class='mb-5 ml-0'>Passenger #" + countersel + "</h5><a href='#' id=entry" + countersel + " onclick='removepass();'>Remove</a><div class='row' id=numberz" + countersel + "><div class='col-md-4' id='selname2'><select class='mdb-select' id=sel"+ countersel +"><option value='1' selected>Mr.</option><option value='2'>Mrs.</option><option value='3'>Miss</option></select></div><div class='col-md-8'><div class='md-form form-group'><input type='text' class='form-control' id=inputname"+ countersel +" placeholder='Full Name'></div></div></div><div class='row' id=number" + countersel + "><div class='col-md-4 pt-3'><select class='mdb-select' id=idsel" + countersel + "><option value='1' selected>KTP/Govt. ID</option><option value='2'>SIM/Driving License</option><option value='3'>Passport</option><option value='3'>Other</option></select></div><div class='col-md-8'><div class='md-form form-group'><input type='text' class='form-control' id=inputid" + countersel + " placeholder='Type your ID Number'></div></div></div></div>");    
+        $('#sel'+ countersel).material_select();
+        $('#idsel'+ countersel).material_select();
+        $('.dropdown-toggle').dropdown(); 
+        $('#number' + countersel).addClass('animated fadeInUp');
+        $('#numberz' + countersel).addClass('animated fadeInUp');
+        $('body, html').animate({ scrollTop: $('#number' + countersel).offset().top }, 1000);
+        $("div").remove('entry'+ countersel);
+
+    };
+    function removepass(){
+$('.entry'+ countersel).remove();
+countersel--;
+$('body, html').animate({ scrollTop: $('#number' + countersel).offset().top }, 1000);
+if (countersel == 5) {
+    $('#addanother').text("Limit Reached");
+    $('#addanother').addClass("disabled");
+}
+else {
+    $('#addanother').text("Add Another");
+    $('#addanother').removeClass("disabled");   
+}
+    };

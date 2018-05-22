@@ -94,10 +94,11 @@
                                                 <p style="font-size: 1rem;">Passenger details must be written as on ID card/passport/driving license.<br> Passenger details cannot be changed after leaving this page, double-check!</p>
                                             </blockquote>
                                         </div>
+                                        <div id="passenjer">
                                         <h5 class="mb-5 ml-0">Passenger #1</h5>
                                         <div class="row">
-                                                <div class="col-md-4 pt-3">
-                                                    <select class="mdb-select">
+                                                <div class="col-md-4">
+                                                    <select class="mdb-select" id="name1">
                                                         <option value="1" selected>Mr.</option>
                                                         <option value="2">Mrs.</option>
                                                         <option value="3">Miss</option>
@@ -111,11 +112,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-       
-                                            <!--IDENTITY-->
                                             <div class="row">
                                                     <div class="col-md-4 pt-3">
-                                                        <select class="mdb-select">
+                                                        <select class="mdb-select" id="id1">
                                                             <option value="1" selected>KTP/Govt. ID</option>
                                                             <option value="2">SIM/Driving License</option>
                                                             <option value="3">Passport</option>
@@ -130,8 +129,14 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                        </div>
+       
+                                            <!--IDENTITY-->
+
                                                 <div class="row mt-1"></div>
                                             <button class="btn btn-mdb-color btn-rounded balik float-left" type="button">Previous</button>
+                                            <button class="btn btn-mdb-color btn-rounded center" type="button" onclick="addpass()" id="addanother">Add Another</button>
                                             <button class="btn btn-mdb-color btn-rounded lanjut float-right" type="button">Next</button>
                                 </div>
                             
@@ -386,7 +391,7 @@ $(document).ready(function () {
       }
       
   });
-  
+
   allPrevBtn.click(function(){
       var curStep = $(this).closest(".shitbrix"),
           curStepBtn = curStep.attr("id"),
@@ -457,8 +462,8 @@ $(document).ready(function () {
 
   $('div.reserve div a.btn-amber').trigger('click');
 });
-                        
-                        </script>
+    </script>
+
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
     <!-- Bootstrap tooltips -->
