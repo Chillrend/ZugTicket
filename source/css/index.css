@@ -163,6 +163,9 @@ nav a{
         -webkit-animation-duration: 0.5s;
         -webkit-animation-delay: 0.3s;
         }
+        .btn-blue-grey:not([disabled]):not(.disabled).active {
+          color:white !important;
+          }
         #step-2 {
           -webkit-animation-duration: 0.5s;
           -webkit-animation-delay: 0.3s;

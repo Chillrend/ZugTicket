@@ -7,13 +7,10 @@ dynamic form with step, use jquery to do this stuff atm
 when it comes to JSP/PHP, AJAX/Angular are required.
 
 already do:
-OMG EVERYTHING FIXED
+working experiment with jquery.
+gret interfeses.
 
 already yesn't/bug/lazystuff:
-- OH SHIT, THAT AUTO SELECT COUNTRY AND STUFF
-- PROGRESSION TRACKING
-- BUTTON LOOKS SHIT, NEED BEAUTIFICATION
-- SHITCODE, NEED BEAUTIFY
-- LOL I FORGOT THAT CHECKOUT MODAL BUTTON
-
+- still use jarallax, i am expecting display unresponsiveness.
+- i havent found the way to animate the text (unnecessary)
 

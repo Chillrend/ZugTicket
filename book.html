@@ -71,16 +71,16 @@
                             <div class="col-md-8 steps-form-2 white-text text-center">
                             <div class="steps-row-2 reserve d-flex justify-content-between disabled">
                                 <div class="steps-step-2">
-                                    <a href="#step-1" type="button" class="btn btn-amber btn-circle-2 waves-effect ml-0" data-toggle="tooltip" data-placement="top" title="New/Existing Account"><i class="fa fa-user" aria-hidden="true"></i></a>
+                                    <a href="#step-1" type="button" class="btn btn-amber wea btn-circle-2 waves-effect ml-0 active" data-toggle="tooltip" data-placement="top" title="New/Existing Account"><i class="fa fa-user" aria-hidden="true"></i></a>
                                 </div>
                                 <div class="steps-step-2">
-                                    <a href="#step-2" type="button" class="btn btn-blue-grey btn-circle-2 waves-effect" data-toggle="tooltip" data-placement="top" title="Personal Data"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                    <a href="#step-2" type="button" class="btn btn-blue-grey wea btn-circle-2 waves-effect" data-toggle="tooltip" data-placement="top" title="Personal Data"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                 </div>
                                 <div class="steps-step-2">
-                                    <a href="#step-3" type="button" class="btn btn-blue-grey btn-circle-2 waves-effect" data-toggle="tooltip" data-placement="top" title="Ticket Select"><i class="fa fa-ticket" aria-hidden="true"></i></a>
+                                    <a href="#step-3" type="button" class="btn btn-blue-grey wea btn-circle-2 waves-effect" data-toggle="tooltip" data-placement="top" title="Ticket Select"><i class="fa fa-ticket" aria-hidden="true"></i></a>
                                 </div>
                                 <div class="steps-step-2">
-                                    <a href="#step-4" type="button" class="btn btn-blue-grey btn-circle-2 waves-effect mr-0" data-toggle="tooltip" data-placement="top" title="Checkout"><i class="fa fa-credit-card" aria-hidden="true"></i></a>
+                                    <a href="#step-4" type="button" class="btn btn-blue-grey wea btn-circle-2 waves-effect mr-0" data-toggle="tooltip" data-placement="top" title="Checkout"><i class="fa fa-credit-card" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                             <p>&nbsp;</p><h3 class="black-text shit" id="shit" data-wow-delay="2s">Do you have an account?</h3>
@@ -390,22 +390,25 @@ $(document).ready(function () {
   allPrevBtn.click(function(){
       var curStep = $(this).closest(".shitbrix"),
           curStepBtn = curStep.attr("id"),
+          yombreng = $('div.reserve div a[href="#' + curStepBtn + '"]'),
           shitext = $('#shit'),
           prevStepSteps = $('div.reserve div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
           switch(curStepBtn) {
         case 'step-2': 
         shitext.fadeToggle();
         shitext.fadeIn();
-            shitext.text("Do you have an Account?");
-
+        shitext.text("Do you have an Account?");
+        yombreng.removeClass("active");
 		break;
         case 'step-3': 
         shitext.fadeToggle();
         shitext.fadeIn();
             shitext.text("Ticket Selection");
+            yombreng.removeClass("active");           
 		break;
         case 'step-4': 
             shitext.text("Checkout");
+            yombreng.removeClass("active");
 		break;
 
       }
@@ -416,6 +419,7 @@ $(document).ready(function () {
       var curStep = $(this).closest(".shitbrix"),
           curStepBtn = curStep.attr("id"),
           shitext = $('#shit'),
+          yombreng = $('div.reserve div a[href="#' + curStepBtn + '"]'),
           nextStepSteps = $('div.reserve div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
           curInputs = curStep.find("input[type='text'],input[type='url']"),
           isValid = true;
@@ -429,9 +433,11 @@ $(document).ready(function () {
         shitext.fadeToggle();
         shitext.fadeIn();
             shitext.text("Ticket Selection");
+            yombreng.addClass("active");
 		break;
         case 'step-3': 
             shitext.text("Checkout");
+            yombreng.addClass("active");
 		break;
 
 
