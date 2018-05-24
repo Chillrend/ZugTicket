@@ -43,425 +43,498 @@
             </div>
         </nav> 
         </strong>
-        <!-- Navbar -->
-        <!-- Full Page Intro -->
-        <!-- <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-color:white; background-repeat: no-repeat; background-size: cover; background-position: center center;"> -->
-            <!-- Mask & flexbox options-->
-            <!-- <div class="mask rgba-white-light d-flex justify-content-center align-items-center"> -->
-                <!-- Content -->
-                <div class="row mt-5"></div>
-                <div class="row mt-5"></div>
-                <div class="container">
-                    <!--Grid row-->
-                    <div class="row">
-                        <!--Grid column-->
-                        <div class="col-md-12 white-text text-center">
-                            
-                            <h1 class="display-3 mb-0 pt-md-5 pt-5 black-text font-weight-bold wow" id="titel" data-wow-delay="0.3s">Ticket <a class="red-text font-weight-bold">Reservation</a> </h1>
-<!-- Stepper --> 
+        <div class="row mt-5"></div>
+        <div class="row mt-5"></div>
+        <div class="container">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-md-12 white-text text-center">
 
-                            
+                    <h1 class="display-3 mb-0 pt-md-5 pt-5 black-text font-weight-bold wow" id="titel" data-wow-delay="0.3s">Ticket <a class="red-text font-weight-bold">Reservation</a> </h1>
+                    <!-- Stepper -->
+
+
+                </div>
+
+                <!--Grid column-->
+            </div>
+            <p>&nbsp;</p>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 steps-form-2 white-text text-center">
+                    <div class="steps-row-2 reserve d-flex justify-content-between disabled">
+                        <div class="steps-step-2">
+                            <a href="#step-1" type="button" class="btn btn-amber wea btn-circle-2 waves-effect ml-0 active" data-toggle="tooltip" data-placement="top" title="New/Existing Account"><i class="fa fa-user" aria-hidden="true"></i></a>
                         </div>
-
-                        <!--Grid column-->
+                        <div class="steps-step-2">
+                            <a href="#step-2" type="button" class="btn btn-blue-grey wea btn-circle-2 waves-effect" data-toggle="tooltip" data-placement="top" title="Personal Data"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="steps-step-2">
+                            <a href="#step-3" type="button" class="btn btn-blue-grey wea btn-circle-2 waves-effect" data-toggle="tooltip" data-placement="top" title="Ticket Select"><i class="fa fa-ticket" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="steps-step-2">
+                            <a href="#step-4" type="button" class="btn btn-blue-grey wea btn-circle-2 waves-effect mr-0" data-toggle="tooltip" data-placement="top" title="Checkout"><i class="fa fa-credit-card" aria-hidden="true"></i></a>
+                        </div>
                     </div>
                     <p>&nbsp;</p>
-                    <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8 steps-form-2 white-text text-center">
-                            <div class="steps-row-2 reserve d-flex justify-content-between disabled">
-                                <div class="steps-step-2">
-                                    <a href="#step-1" type="button" class="btn btn-amber wea btn-circle-2 waves-effect ml-0 active" data-toggle="tooltip" data-placement="top" title="New/Existing Account"><i class="fa fa-user" aria-hidden="true"></i></a>
-                                </div>
-                                <div class="steps-step-2">
-                                    <a href="#step-2" type="button" class="btn btn-blue-grey wea btn-circle-2 waves-effect" data-toggle="tooltip" data-placement="top" title="Personal Data"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                </div>
-                                <div class="steps-step-2">
-                                    <a href="#step-3" type="button" class="btn btn-blue-grey wea btn-circle-2 waves-effect" data-toggle="tooltip" data-placement="top" title="Ticket Select"><i class="fa fa-ticket" aria-hidden="true"></i></a>
-                                </div>
-                                <div class="steps-step-2">
-                                    <a href="#step-4" type="button" class="btn btn-blue-grey wea btn-circle-2 waves-effect mr-0" data-toggle="tooltip" data-placement="top" title="Checkout"><i class="fa fa-credit-card" aria-hidden="true"></i></a>
-                                </div>
+                    <h3 class="black-text shit" id="shit" data-wow-delay="2s">Do you have an account?</h3>
+                    <form role="form" action="" method="post" id="payment" onsubmit="return validateDate()">
+                        <div class="wow shitbrix" id="step-1" data-wow-delay="0.3s"> <a class="btn btn-red btn-lg" data-toggle="modal" data-target="#darkModalForm">I have an Account</a>
+                            <button class="btn btn-lg btn-white lanjut" type="button">New Reservation</button> </div>
+                        <div class="wow shitbrix black-text" id="step-2">
+                            <div class="col-md-12">
+                                <blockquote class="blockquote bq-warning">
+                                    <p class="bq-title" style="font-size: 1rem;"><i class="fa fa-warning"></i> Heads up!</p>
+                                    <p style="font-size: 1rem;">Passenger details must be written as on ID card/passport/driving license.<br> Passenger details cannot be changed after leaving this page, double-check!</p>
+                                </blockquote>
                             </div>
-                            <p>&nbsp;</p><h3 class="black-text shit" id="shit" data-wow-delay="2s">Do you have an account?</h3>
-                            <form role="form" action="" method="post" id="payment" onsubmit="return validateDate()">
-                            <div class="wow shitbrix" id="step-1" data-wow-delay="0.3s"> <a class="btn btn-red btn-lg">I have an Account</a> 
-                                <button class="btn btn-lg btn-white lanjut" type="button">New Reservation</button> </div>
-                            <div class="wow shitbrix black-text" id="step-2">
-                                    <div class="col-md-12">
-                                            <blockquote class="blockquote bq-warning">
-                                                <p class="bq-title" style="font-size: 1rem;"><i class="fa fa-warning"></i> Heads up!</p>
-                                                <p style="font-size: 1rem;">Passenger details must be written as on ID card/passport/driving license.<br> Passenger details cannot be changed after leaving this page, double-check!</p>
-                                            </blockquote>
-                                        </div>
-                                        <div id="passenjer">
-                                        <h5 class="mb-5 ml-0">Passenger #1</h5>
-                                        <div class="row">
-                                                <div class="col-md-4">
-                                                    <select class="mdb-select" id="name1">
+                            <div id="passenjer">
+                                <h5 class="mb-5 ml-0">Passenger #1</h5>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <select class="mdb-select" id="name1">
                                                         <option value="1" selected>Mr.</option>
                                                         <option value="2">Mrs.</option>
                                                         <option value="3">Miss</option>
                                                     </select>
-                                                    <label>Title</label>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="md-form form-group">
-                                                        <input type="text" class="form-control" id="inputname1" placeholder="Full Name">
-                                                        <label for="inputname1">Name</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                    <div class="col-md-4 pt-3">
-                                                        <select class="mdb-select" id="id1">
+                                        <label>Title</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="md-form form-group">
+                                            <input type="text" class="form-control" id="inputname1" placeholder="Full Name">
+                                            <label for="inputname1">Name</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 pt-3">
+                                        <select class="mdb-select" id="id1">
                                                             <option value="1" selected>KTP/Govt. ID</option>
                                                             <option value="2">SIM/Driving License</option>
                                                             <option value="3">Passport</option>
                                                             <option value="3">Other</option>
                                                         </select>
-                                                        <label>ID Type</label>
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <div class="md-form form-group">
-                                                            <input type="text" class="form-control" id="inputid1" placeholder="Type your ID Number">
-                                                            <label for="inputid1">ID Number</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                        </div>
-       
-                                            <!--IDENTITY-->
-
-                                             <p>&nbsp;</p><p>&nbsp;</p>
-                                            <button class="btn btn-mdb-color btn-rounded balik float-left" type="button">Previous</button>
-                                            <button class="btn btn-mdb-color btn-rounded center" type="button" onclick="addpass()" id="addanother">Add Another</button>
-                                            <button class="btn btn-mdb-color btn-rounded lanjut float-right" type="button">Next</button>
-                                </div>
-                            
-
-
-
-                              
-                           
-                                </div>
-                                <div class="col-md-12 steps-form-2 white-text text-center">
-                                <div class="wow shitbrix black-text" id="step-3">
-                                        <table class="table table-responsive-md">
-
-                                                <!--Table head-->
-                                                <thead class="red lighten-2">
-                                                    <tr>
-                                                        <th>Select</th>
-                                                        <th>#</th>
-                                                        <th>Train Number</th>
-                                                        <th class="th-sm">Train Name</th>
-                                                        <th class="th-sm">From</th>
-                                                        <th class="th-sm">To</th>
-                                                        <th class="th-sm">Departure Date</th>
-                                                        <th class="th-sm">Departure Time</th>
-                                                        <th class="th-sm">Price</th>
-                                                    </tr>
-                                                </thead>
-                                                <!--Table head-->
-                                    
-                                                <!--Table body-->
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <input type="checkbox" class="filled-in" id="checkbox125">
-                                                            <label for="checkbox125" class="label-table"></label>
-                                                        </td>
-                                                        <th scope="row">1</th>
-                                                        <td>No. 14223</td>
-                                                        <td>Nambo Jaya</td>
-                                                        <td>Nambo</td>
-                                                        <td>London</td>
-                                                        <td>09 - July - 2018</td>
-                                                        <td>14:30:00</td>
-                                                        <td>EUR 1400</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <input type="checkbox" class="filled-in" id="checkbox126">
-                                                            <label for="checkbox126" class="label-table"></label>
-                                                        </td>
-                                                        <th scope="row">1</th>
-                                                        <td>No. 14223</td>
-                                                        <td>Nambo Jaya</td>
-                                                        <td>Nambo</td>
-                                                        <td>London</td>
-                                                        <td>09 - July - 2018</td>
-                                                        <td>14:30:00</td>
-                                                        <td>EUR 1400</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <input type="checkbox" class="filled-in" id="checkbox127">
-                                                            <label for="checkbox127" class="label-table"></label>
-                                                        </td>
-                                                        <th scope="row">1</th>
-                                                        <td>No. 14223</td>
-                                                        <td>Nambo Jaya</td>
-                                                        <td>Nambo</td>
-                                                        <td>London</td>
-                                                        <td>09 - July - 2018</td>
-                                                        <td>14:30:00</td>
-                                                        <td>EUR 1400</td>
-                                                    </tr>
-                                                </tbody>
-                                                <!--Table body-->
-                                    
-                                    
-                                            </table>
-                                            <button class="btn btn-mdb-color btn-rounded balik float-left" type="button">Previous</button>
-                                            <button class="btn btn-mdb-color btn-rounded lanjut float-right" type="button">Next</button>
+                                        <label>ID Type</label>
                                     </div>
-                                 </div>
-                                      
-                                 <div class="container mt-5 mb-5">
-                                        <!-- Extended material form grid -->
+                                    <div class="col-md-8">
+                                        <div class="md-form form-group">
+                                            <input type="text" class="form-control" id="inputid1" placeholder="Type your ID Number">
+                                            <label for="inputid1">ID Number</label>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                        <!-- Horizontal Steppers -->
+                            </div>
 
-                                        <!-- /.Horizontal Steppers -->
-                                        
-                                        <div class="wow shitbrix" id="step-4">
+                            <!--IDENTITY-->
 
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <select class="mdb-select">
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <button class="btn btn-mdb-color btn-rounded balik float-left" type="button">Previous</button>
+                            <button class="btn btn-mdb-color btn-rounded center" type="button" onclick="addpass()" id="addanother">Add Another</button>
+                            <button class="btn btn-mdb-color btn-rounded lanjut float-right" type="button">Next</button>
+                        </div>
+
+
+
+
+
+
+                </div>
+                <div class="col-md-12 steps-form-2 white-text text-center">
+                    <div class="wow shitbrix black-text" id="step-3">
+                        <table class="table table-responsive-md">
+
+                            <!--Table head-->
+                            <thead class="red lighten-2">
+                                <tr>
+                                    <th>Select</th>
+                                    <th>#</th>
+                                    <th>Train Number</th>
+                                    <th class="th-sm">Train Name</th>
+                                    <th class="th-sm">From</th>
+                                    <th class="th-sm">To</th>
+                                    <th class="th-sm">Departure Date</th>
+                                    <th class="th-sm">Departure Time</th>
+                                    <th class="th-sm">Price</th>
+                                </tr>
+                            </thead>
+                            <!--Table head-->
+
+                            <!--Table body-->
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="filled-in" id="checkbox125">
+                                        <label for="checkbox125" class="label-table"></label>
+                                    </td>
+                                    <th scope="row">1</th>
+                                    <td>No. 14223</td>
+                                    <td>Nambo Jaya</td>
+                                    <td>Nambo</td>
+                                    <td>London</td>
+                                    <td>09 - July - 2018</td>
+                                    <td>14:30:00</td>
+                                    <td>EUR 1400</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="filled-in" id="checkbox126">
+                                        <label for="checkbox126" class="label-table"></label>
+                                    </td>
+                                    <th scope="row">1</th>
+                                    <td>No. 14223</td>
+                                    <td>Nambo Jaya</td>
+                                    <td>Nambo</td>
+                                    <td>London</td>
+                                    <td>09 - July - 2018</td>
+                                    <td>14:30:00</td>
+                                    <td>EUR 1400</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="filled-in" id="checkbox127">
+                                        <label for="checkbox127" class="label-table"></label>
+                                    </td>
+                                    <th scope="row">1</th>
+                                    <td>No. 14223</td>
+                                    <td>Nambo Jaya</td>
+                                    <td>Nambo</td>
+                                    <td>London</td>
+                                    <td>09 - July - 2018</td>
+                                    <td>14:30:00</td>
+                                    <td>EUR 1400</td>
+                                </tr>
+                            </tbody>
+                            <!--Table body-->
+
+
+                        </table>
+                        <button class="btn btn-mdb-color btn-rounded balik float-left" type="button">Previous</button>
+                        <button class="btn btn-mdb-color btn-rounded lanjut float-right" type="button">Next</button>
+                    </div>
+                </div>
+
+                <div class="container mt-5 mb-5">
+                    <!-- Extended material form grid -->
+
+                    <!-- Horizontal Steppers -->
+
+                    <!-- /.Horizontal Steppers -->
+
+                    <div class="wow shitbrix" id="step-4">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <select class="mdb-select">
                                                         <option value="1" selected>Germany</option>
                                                         <option value="2">International</option>
                                                     </select>
-                                                        <label>Country</label>
-                                                    </div>
+                                <label>Country</label>
+                            </div>
 
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <label>Credit Details</label>  
-                                                        <div class="md-form form-group">  
-                                                            <input type="text" class="form-control" id="inputcc" pattern="[0-9].{7,7}" required title="Enter Your 8 Digit Card Number">
-                                                            <label for="inputcc" pattern="[0-9].{7,7}" required title="Enter Your 8 Digit Card Number">Card Number</label>
-                                                            <div class="pt-2">
-                                                                <img src="source/image/200px-Mastercard-logo.svg.png" width="37px" alt="" class="img-fluid">&nbsp;
-                                                                <img src="source/image/deutsche-bank-logo.png" width="37px" alt="" class="img-fluid">&nbsp;
-                                                                <img src="source/image/discover200.png" width="37px" alt="" class="img-fluid">&nbsp;
-                                                                <img src="source/image/amex200.png" width="37px" alt="" class="img-fluid">&nbsp;
-                                                                <img src="source/image/Former_Visa_(company)_logo.svg.png" width="37px" alt="" class="img-fluid">&nbsp;
-                                                            </div>
-                                                        </div>
-                                                        
-                                                    </div>
-                                                
-                                                    <div class="col-md-6">
-                                                            <label>Contact Information</label>
-                                                            <div class="md-form form-group">
-                                                                <input type="text" class="form-control" id="inputaddr" required>
-                                                                <label for="inputaddr">Billing Address</label>
-                                                            </div>
-                                                            <div class="md-form form-group" id="custom">
-                                                                    <input type="text" class="form-control" id="inputphone" title="Phone number must match this pattern: 000-000-0000" required pattern="[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}">
-                                                                    <label for="inputphone">Phone</label>
-                                                                </div>
-                                                        </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="md-form form-group">
-                                                            <input type="text" id="expdate" class="form-control datepicker" required title="Pick any date in the month your card expires">
-                                                            <label for="expdate">Expiration Date</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                        <div class="md-form form-group">
-                                                            <input type="text" class="form-control" id="inputcvv" pattern="[0-9].{3,3}" required title="Check your CVV Number on the back of your card">
-                                                            <label for="inputcvv">CVV/CSC</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                            <div class="md-form form-group">
-                                                                <input type="email" class="form-control" id="inputemail" required>
-                                                                <label for="inputemail">E-mail</label>
-                                                            </div>
-                                                        </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="md-form form-group">
-                                                            <input type="text" class="form-control" id="inputfname" pattern="[a-zA-Z' ]+" required>
-                                                            <label for="inputfname">First Name</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="md-form form-group">
-                                                            <input type="text" class="form-control" id="inputlname" pattern="[a-zA-Z' ]+" required>
-                                                            <label for="inputlname">Last Name</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                            <img src="source/image/comodo-secure-logo-new.png" alt="" width="75px" class="img-fluid">
-                                                            <img src="source/image/mcafee-secure-ic_0.jpg" alt="" width="75px" class="img-fluid">
-                                                            <img src="source/image/norton_secured_seal-big.png" alt="" width="75px" class="img-fluid">
-                                                            <img src="source/image/geotrust_secure.svg" alt="" width="75px" class="img-fluid">
-                                                        </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="md-form form-group">
-                                                            <input type="text" class="form-control" id="inputzip" pattern="[0-9].{4,4}" required title="Type your zip code ex: 16914">
-                                                            <label for="inputzip">Zip Code</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="md-form form-group">
-                                                            <input type="text" class="form-control" id="inputstate" required pattern="[A-Z][A-Za-z' -]+">
-                                                            <label for="inputstate">State</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                            <button class="btn btn-mdb-color btn-rounded balik float-left" type="button">Previous</button>
-                                                    </div>
-                                                    <div class="col-md-4 mb-3">
-                                                            
-                                                            <button class="btn btn-mdb-color btn-rounded lanjut float-right" type="submit">Checkout</button>
-      
-                                                    </div>
-                                                </div>
-
-                                            </form>
-                                        </div>
-                                        <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-                                        <button id="fixed-action-btn" type="button" class="btn btn-floating btn-large red" data-toggle="modal" data-target="#modalCart"><i class="fa fa-shopping-cart"></i></button>
-                                        </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Credit Details</label>
+                                <div class="md-form form-group">
+                                    <input type="text" class="form-control" id="inputcc" pattern="[0-9].{7,7}" required title="Enter Your 8 Digit Card Number">
+                                    <label for="inputcc" pattern="[0-9].{7,7}" required title="Enter Your 8 Digit Card Number">Card Number</label>
+                                    <div class="pt-2">
+                                        <img src="source/image/200px-Mastercard-logo.svg.png" width="37px" alt="" class="img-fluid">&nbsp;
+                                        <img src="source/image/deutsche-bank-logo.png" width="37px" alt="" class="img-fluid">&nbsp;
+                                        <img src="source/image/discover200.png" width="37px" alt="" class="img-fluid">&nbsp;
+                                        <img src="source/image/amex200.png" width="37px" alt="" class="img-fluid">&nbsp;
+                                        <img src="source/image/Former_Visa_(company)_logo.svg.png" width="37px" alt="" class="img-fluid">&nbsp;
                                     </div>
+                                </div>
 
+                            </div>
+
+                            <div class="col-md-6">
+                                <label>Contact Information</label>
+                                <div class="md-form form-group">
+                                    <input type="text" class="form-control" id="inputaddr" required>
+                                    <label for="inputaddr">Billing Address</label>
+                                </div>
+                                <div class="md-form form-group" id="custom">
+                                    <input type="text" class="form-control" id="inputphone" title="Phone number must match this pattern: 000-000-0000" required pattern="[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}">
+                                    <label for="inputphone">Phone</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="md-form form-group">
+                                    <input type="text" id="expdate" class="form-control datepicker" required title="Pick any date in the month your card expires">
+                                    <label for="expdate">Expiration Date</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="md-form form-group">
+                                    <input type="text" class="form-control" id="inputcvv" pattern="[0-9].{3,3}" required title="Check your CVV Number on the back of your card">
+                                    <label for="inputcvv">CVV/CSC</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="md-form form-group">
+                                    <input type="email" class="form-control" id="inputemail" required>
+                                    <label for="inputemail">E-mail</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="md-form form-group">
+                                    <input type="text" class="form-control" id="inputfname" pattern="[a-zA-Z' ]+" required>
+                                    <label for="inputfname">First Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="md-form form-group">
+                                    <input type="text" class="form-control" id="inputlname" pattern="[a-zA-Z' ]+" required>
+                                    <label for="inputlname">Last Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="source/image/comodo-secure-logo-new.png" alt="" width="75px" class="img-fluid">
+                                <img src="source/image/mcafee-secure-ic_0.jpg" alt="" width="75px" class="img-fluid">
+                                <img src="source/image/norton_secured_seal-big.png" alt="" width="75px" class="img-fluid">
+                                <img src="source/image/geotrust_secure.svg" alt="" width="75px" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="md-form form-group">
+                                    <input type="text" class="form-control" id="inputzip" pattern="[0-9].{4,4}" required title="Type your zip code ex: 16914">
+                                    <label for="inputzip">Zip Code</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="md-form form-group">
+                                    <input type="text" class="form-control" id="inputstate" required pattern="[A-Z][A-Za-z' -]+">
+                                    <label for="inputstate">State</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn btn-mdb-color btn-rounded balik float-left" type="button">Previous</button>
+                            </div>
+                            <div class="col-md-4 mb-3">
+
+                                <button class="btn btn-mdb-color btn-rounded lanjut float-right" type="submit">Checkout</button>
+
+                            </div>
+                        </div>
 
                         </form>
                     </div>
-    
-                    <div class="col-md-2"></div>
-                    <!--Grid row-->
+                    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+                        <button id="fixed-action-btn" type="button" class="btn btn-floating btn-large red" data-toggle="modal" data-target="#modalCart"><i class="fa fa-shopping-cart"></i></button>
+                    </div>
                 </div>
-                <!-- Content -->
+
+
+                </form>
             </div>
+
+            <div class="col-md-2"></div>
+            <!--Grid row-->
+        </div>
+        <!-- Content -->
+        </div>
         <!-- </div> -->
         <!-- </div> -->
     </header>
     <!-- Main navigation -->
     <!--Main Navigation-->
     <!--Main Layout-->
+    <!-- Modal: modalCart -->
+    <div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Your Due</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
 
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Train Name</th>
+                                <th>Passenger</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Nambo Jaya</td>
+                                <td>4 Passenger</td>
+                                <td>EUR 6000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--Footer-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal: modalCart -->
+    <!--MODAL-->
+    <div class="modal fade" id="darkModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog form-dark" role="document">
+            <!--Content-->
+            <div class="modal-content card card-image">
+                <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+                    <!--Header-->
+                    <div class="modal-header text-center pb-4">
+                        <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLabel"><strong>SIGN</strong> <a class="red-text font-weight-bold"><strong> IN</strong></a></h3> <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>
+                    <!--Body-->
+                    <div class="modal-body">
+                        <!--Body-->
+                        <div class="md-form mb-5"> <input type="email" id="Form-email5" class="form-control validate white-text"> <label data-error="Incorrect" data-success="Sounds Good!" for="Form-email5">Your email</label> </div>
+                        <div class="md-form pb-3"> <input type="password" id="Form-pass5" class="form-control validate white-text"> <label data-error="" data-success="" for="Form-pass5">Your password</label>
+                            <div class="form-group mt-4"> <input type="checkbox" id="checkbox624"> <label for="checkbox624" class="white-text">Remember me</label> </div>
+                        </div>
+                        <!--Grid row-->
+                        <div class="row d-flex align-items-center mb-4">
+                            <!--Grid column-->
+                            <div class="text-center mb-3 col-md-12"> <button type="button" class="btn btn-danger btn-block btn-rounded z-depth-1">Sign in</button> </div>
+                            <!--Grid column-->
+                        </div>
+                        <!--Grid row-->
+                        <!--Grid row-->
+                        <div class="row">
+                            <!--Grid column-->
+                            <div class="col-md-12">
+                                <p class="font-small white-text d-flex justify-content-end"> Don't Have an account? <a href="#" class="red-text ml-1 font-weight-bold"> Sign Up</a></p>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+                        <!--Grid row-->
+                    </div>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
     <script>
-                        
-                
         $('#titel').addClass('animated fadeInUp');
-        $('#titel').one('webkitAnimationEnd animationend',$('#shit').addClass('animated fadeInUp') );
-        $('#shit').one('webkitAnimationEnd animationend',$('#step-1').addClass('animated fadeInUp') );
-        $('#step-1').one('webkitAnimationEnd animationend',$('#step-2').addClass('animated fadeInRight') );
-        $('#step-2').one('webkitAnimationEnd animationend',$('#step-3').addClass('animated fadeInRight') );
-        $('#step-3').one('webkitAnimationEnd animationend',$('#step-4').addClass('animated fadeInRight') );
-// Tooltips Initialization
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+        $('#titel').one('webkitAnimationEnd animationend', $('#shit').addClass('animated fadeInUp'));
+        $('#shit').one('webkitAnimationEnd animationend', $('#step-1').addClass('animated fadeInUp'));
+        $('#step-1').one('webkitAnimationEnd animationend', $('#step-2').addClass('animated fadeInRight'));
+        $('#step-2').one('webkitAnimationEnd animationend', $('#step-3').addClass('animated fadeInRight'));
+        $('#step-3').one('webkitAnimationEnd animationend', $('#step-4').addClass('animated fadeInRight'));
+        // Tooltips Initialization
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
 
-// Steppers                
-$(document).ready(function () {
-  var navListItems = $('div.reserve div a'),
-          allWells = $('.shitbrix'),
-          allNextBtn = $('.lanjut'),
-          allPrevBtn = $('.balik');
+        // Steppers                
+        $(document).ready(function() {
+            var navListItems = $('div.reserve div a'),
+                allWells = $('.shitbrix'),
+                allNextBtn = $('.lanjut'),
+                allPrevBtn = $('.balik');
 
-  allWells.hide();
+            allWells.hide();
 
-  navListItems.click(function (e) {
-      e.preventDefault();
-      var $target = $($(this).attr('href')),
-              $item = $(this);
+            navListItems.click(function(e) {
+                e.preventDefault();
+                var $target = $($(this).attr('href')),
+                    $item = $(this);
 
-      if (!$item.hasClass('disabled')) {
-          navListItems.removeClass('btn-amber').addClass('btn-blue-grey');
-          $item.addClass('btn-amber');
-          allWells.hide();
-          $target.show();
-          $target.find('input:eq(0)').focus();
-      }
-      
-  });
+                if (!$item.hasClass('disabled')) {
+                    navListItems.removeClass('btn-amber').addClass('btn-blue-grey');
+                    $item.addClass('btn-amber');
+                    allWells.hide();
+                    $target.show();
+                    $target.find('input:eq(0)').focus();
+                }
 
-  allPrevBtn.click(function(){
-      var curStep = $(this).closest(".shitbrix"),
-          curStepBtn = curStep.attr("id"),
-          yombreng = $('div.reserve div a[href="#' + curStepBtn + '"]'),
-          shitext = $('#shit'),
-          prevStepSteps = $('div.reserve div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
-          switch(curStepBtn) {
-        case 'step-2': 
-        shitext.fadeToggle();
-        shitext.fadeIn();
-        shitext.text("Do you have an Account?");
-        yombreng.removeClass("active");
-		break;
-        case 'step-3': 
-        shitext.fadeToggle();
-        shitext.fadeIn();
-            shitext.text("Ticket Selection");
-            yombreng.removeClass("active");           
-		break;
-        case 'step-4': 
-            shitext.text("Checkout");
-            yombreng.removeClass("active");
-		break;
+            });
 
-      }
-          prevStepSteps.removeAttr('disabled').trigger('click');
-  });
+            allPrevBtn.click(function() {
+                var curStep = $(this).closest(".shitbrix"),
+                    curStepBtn = curStep.attr("id"),
+                    yombreng = $('div.reserve div a[href="#' + curStepBtn + '"]'),
+                    shitext = $('#shit'),
+                    prevStepSteps = $('div.reserve div a[href="#' + curStepBtn + '"]').parent().prev().children("a");
+                switch (curStepBtn) {
+                    case 'step-2':
+                        shitext.fadeToggle();
+                        shitext.fadeIn();
+                        shitext.text("Do you have an Account?");
+                        yombreng.removeClass("active");
+                        break;
+                    case 'step-3':
+                        shitext.fadeToggle();
+                        shitext.fadeIn();
+                        shitext.text("Ticket Selection");
+                        yombreng.removeClass("active");
+                        break;
+                    case 'step-4':
+                        shitext.text("Checkout");
+                        yombreng.removeClass("active");
+                        break;
 
-  allNextBtn.click(function(){
-      var curStep = $(this).closest(".shitbrix"),
-          curStepBtn = curStep.attr("id"),
-          shitext = $('#shit'),
-          yombreng = $('div.reserve div a[href="#' + curStepBtn + '"]'),
-          nextStepSteps = $('div.reserve div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
-          curInputs = curStep.find("input[type='text'],input[type='url']"),
-          isValid = true;
-          switch(curStepBtn) {
-            case 'step-1': 
-            shitext.fadeToggle();
-            shitext.fadeIn();
-            shitext.text("Personal Information");
-		break;
-        case 'step-2': 
-        shitext.fadeToggle();
-        shitext.fadeIn();
-            shitext.text("Ticket Selection");
-            yombreng.addClass("active");
-		break;
-        case 'step-3': 
-            shitext.text("Checkout");
-            yombreng.addClass("active");
-		break;
+                }
+                prevStepSteps.removeAttr('disabled').trigger('click');
+            });
+
+            allNextBtn.click(function() {
+                var curStep = $(this).closest(".shitbrix"),
+                    curStepBtn = curStep.attr("id"),
+                    shitext = $('#shit'),
+                    yombreng = $('div.reserve div a[href="#' + curStepBtn + '"]'),
+                    nextStepSteps = $('div.reserve div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+                    curInputs = curStep.find("input[type='text'],input[type='url']"),
+                    isValid = true;
+                switch (curStepBtn) {
+                    case 'step-1':
+                        shitext.fadeToggle();
+                        shitext.fadeIn();
+                        shitext.text("Personal Information");
+                        break;
+                    case 'step-2':
+                        shitext.fadeToggle();
+                        shitext.fadeIn();
+                        shitext.text("Ticket Selection");
+                        yombreng.addClass("active");
+                        break;
+                    case 'step-3':
+                        shitext.text("Checkout");
+                        yombreng.addClass("active");
+                        break;
 
 
-      }
+                }
 
-      $(".form-group").removeClass("has-error");
-      for(var i=0; i< curInputs.length; i++){
-          if (!curInputs[i].validity.valid){
-              isValid = false;
-              $(curInputs[i]).closest(".form-group").addClass("has-error");
-          }
-      }
+                $(".form-group").removeClass("has-error");
+                for (var i = 0; i < curInputs.length; i++) {
+                    if (!curInputs[i].validity.valid) {
+                        isValid = false;
+                        $(curInputs[i]).closest(".form-group").addClass("has-error");
+                    }
+                }
 
-      if (isValid)
-          nextStepSteps.removeAttr('disabled').trigger('click');
-  });
+                if (isValid)
+                    nextStepSteps.removeAttr('disabled').trigger('click');
+            });
 
-  $('div.reserve div a.btn-amber').trigger('click');
-});
+            $('div.reserve div a.btn-amber').trigger('click');
+        });
+
     </script>
 
     <!-- JQuery -->
