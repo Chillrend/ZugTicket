@@ -1,17 +1,26 @@
  $(document).ready(function () {
      $('.mdb-select').material_select();
      $('.dropdown-toggle').dropdown();
-     $('.datepicker').pickadate();
      $('input:checkbox').click(function () {
          $('input:checkbox').not(this).prop('checked', false);
      });
+     $('#bquote').hide();
+     $('select[name=htm]').change(function() {
+        if($('select[name=htm] option:nth(5)').is(':selected')){
+         $('#bquote').fadeIn('slow');
+     }else{
+         $('#bquote').fadeOut('slow');
+     }
+    });
  });
 
-$('#fixed-action-btn').click(function(){$('#modalCart').modal('show');})
+ $('#fixed-action-btn').click(function () {
+     $('#modalCart').modal('show');
+ })
 
-var datezfiveyear = new Date();
+ var datezfiveyear = new Date();
 
-datezfiveyear.setFullYear(new Date().getFullYear() + 5);
+ datezfiveyear.setFullYear(new Date().getFullYear() + 5);
 
  $("#expdate").pickadate({
      format: 'mmmm, yyyy',
@@ -19,6 +28,33 @@ datezfiveyear.setFullYear(new Date().getFullYear() + 5);
      min: new Date(),
      max: datezfiveyear
  });
+var datezthreemonth = new Date();
+datezthreemonth.setMonth(new Date().getMonth() + 3);
+
+$('.datepicker').pickadate({
+    min: new Date(),
+    max: datezthreemonth,
+});
+
+function valindex() {
+    var tanggalvalid = document.getElementById('tanggal_berangkat');
+    if($('select[name=route] option:nth(0)').is(':selected')){
+        alert('Please Select Route');
+        return false;
+    }else if($('select[name=st_from] option:nth(0)').is(':selected')){
+        alert('Please Select Departure Station');
+        return false;
+    }else if($('select[name=st_to] option:nth(0)').is(':selected')){
+        alert('Please Select Arrival Station');
+        return false;
+    }else if($('select[name=htm] option:nth(0)').is(':selected')){
+        alert('Please select amount of passenger');
+        return false;
+    }else if(tanggalvalid.value == ""){
+        alert('Please Choose departure date');
+        return false;
+    }
+ }
 
  function validateDate() {
      var expvalid = document.getElementById("expdate");
@@ -51,7 +87,6 @@ datezfiveyear.setFullYear(new Date().getFullYear() + 5);
          statevalid.setCustomValidity("");
      }
  });
-
  var namevalid = document.getElementById("inputlname");
  var namevalid1 = document.getElementById("inputfname");
 
@@ -71,43 +106,114 @@ datezfiveyear.setFullYear(new Date().getFullYear() + 5);
      }
  });
 
-var zipvalid = document.getElementById("inputzip");
-zipvalid.addEventListener("input", function (event) {
+ var zipvalid = document.getElementById("inputzip");
+ zipvalid.addEventListener("input", function (event) {
      if (zipvalid.validity.patternMismatch) {
          zipvalid.setCustomValidity("This isn't earth zip code, do you live in mars ?");
      } else {
          zipvalid.setCustomValidity("");
      }
  });
-var countersel = 1;
-    function addpass(){
-        // $('.mdb-select').material_select('destroy');
-        if (countersel == 4) {
-            $('#addanother').text("Limit Reached");
-            $('#addanother').addClass("disabled");
-        }
-        
-        countersel++;
-        $('#passenjer').append("<div class=entry" + countersel + "><p>&nbsp;</p><h5 class='mb-5 ml-0'>Passenger #" + countersel + "</h5><a href='#' id=entry" + countersel + " onclick='removepass();'>Remove</a><div class='row' id=numberz" + countersel + "><div class='col-md-4 pt-3' id='selname2'><select class='mdb-select' id=sel"+ countersel +"><option value='1' selected>Mr.</option><option value='2'>Mrs.</option><option value='3'>Miss</option></select></div><div class='col-md-8'><div class='md-form form-group'><input type='text' class='form-control' id=inputname"+ countersel +" placeholder='Full Name'></div></div></div><div class='row' id=number" + countersel + "><div class='col-md-4 pt-3'><select class='mdb-select' id=idsel" + countersel + "><option value='1' selected>KTP/Govt. ID</option><option value='2'>SIM/Driving License</option><option value='3'>Passport</option><option value='3'>Other</option></select></div><div class='col-md-8'><div class='md-form form-group'><input type='text' class='form-control' id=inputid" + countersel + " placeholder='Type your ID Number'></div></div></div></div>");    
-        $('#sel'+ countersel).material_select();
-        $('#idsel'+ countersel).material_select();
-        $('.dropdown-toggle').dropdown(); 
-        $('#number' + countersel).addClass('animated fadeInUp');
-        $('#numberz' + countersel).addClass('animated fadeInUp');
-        $('body, html').animate({ scrollTop: $('#number' + countersel).offset().top }, 1000);
-        $("div").remove('entry'+ countersel);
+ var countersel = 1;
 
-    };
-    function removepass(){
-$('.entry'+ countersel).remove();
-countersel--;
-$('body, html').animate({ scrollTop: $('#number' + countersel).offset().top }, 1000);
-if (countersel == 5) {
-    $('#addanother').text("Limit Reached");
-    $('#addanother').addClass("disabled");
-}
-else {
-    $('#addanother').text("Add Another");
-    $('#addanother').removeClass("disabled");   
-}
-    };
+ function addpass() {
+     // $('.mdb-select').material_select('destroy');
+     if (countersel >= 4) {
+         $('#addanother').text("Limit Reached");
+         $('#addanother').addClass("disabled");
+     }
+
+     countersel++;
+     $('#passenjer').append("<div class=entry" + countersel + "><p>&nbsp;</p><h5 class='mb-5 ml-0'>Passenger #" + countersel + "</h5><a href='#' id=entry" + countersel + " onclick='removepass();'>Remove</a><div class='row' id=numberz" + countersel + "><div class='col-md-4 pt-3' id='selname2'><select class='mdb-select' id=sel" + countersel + "><option value='1' selected>Mr.</option><option value='2'>Mrs.</option><option value='3'>Miss</option></select></div><div class='col-md-8'><div class='md-form form-group'><input type='text' class='form-control' id=inputname" + countersel + " placeholder='Full Name'></div></div></div><div class='row' id=number" + countersel + "><div class='col-md-4 pt-3'><select class='mdb-select' id=idsel" + countersel + "><option value='1' selected>KTP/Govt. ID</option><option value='2'>SIM/Driving License</option><option value='3'>Passport</option><option value='3'>Other</option></select></div><div class='col-md-8'><div class='md-form form-group'><input type='text' class='form-control' id=inputid" + countersel + " placeholder='Type your ID Number'></div></div></div></div>");
+     $('#sel' + countersel).material_select();
+     $('#idsel' + countersel).material_select();
+     $('.dropdown-toggle').dropdown();
+     $('#number' + countersel).addClass('animated fadeInUp');
+     $('#numberz' + countersel).addClass('animated fadeInUp');
+     $('body, html').animate({
+         scrollTop: $('#number' + countersel).offset().top
+     }, 1000);
+     $("div").remove('entry' + countersel);
+
+ };
+
+ function removepass() {
+     $('.entry' + countersel).remove();
+     countersel--;
+     $('body, html').animate({
+         scrollTop: $('#number' + countersel).offset().top
+     }, 1000);
+     if (countersel == 5) {
+         $('#addanother').text("Limit Reached");
+         $('#addanother').addClass("disabled");
+     } else {
+         $('#addanother').text("Add Another");
+         $('#addanother').removeClass("disabled");
+     }
+ };
+
+ function cekot() {
+     var i;
+     i = 0;
+     for (i = 0; i < countersel; i++) {
+
+         $('#cekotlist').append('<tr id="pesenjer' + countersel + '"><th scope="row">1</th><td>Nambo Jaya</td><td>1 Passenger</td><td>EUR 6000</td></tr>');
+
+     }
+
+ };
+
+ function removecekot() {
+     var i;
+     i = 0;
+     for (i = 0; i < countersel; i++) {
+
+         $('#pesenjer' + countersel).remove();
+
+     }
+ };
+
+
+ function dick() {
+
+     var stuff = "";
+     var ok = 'no';
+     var myNode = document.getElementById("alertz");
+     for (var i = 1; i <= countersel; i++) {
+         if ($('#inputname' + i).val() == '') {
+             stuff += 'Passenger name #' + i + ' are required <br>';
+
+         } else if ($('#inputid' + i).val() == '') {
+             stuff += 'Passenger ID #' + i + ' are required <br>';
+
+         } else if ($('#inputname' + i).val() == '' && $('#inputid' + i).val() == '') {
+             stuff += 'Passenger name and ID #' + i + ' are required <br>';
+
+         }
+
+     }
+     while (myNode.firstChild) {
+         myNode.removeChild(myNode.firstChild);
+     }
+     if (stuff == "") {
+         $('#ikuzo').removeClass("disabled");
+         $('#alertz').removeClass("alert alert-warning alert-dismissible fade show");
+
+
+     } else {
+         $('#alertz').addClass("alert alert-warning alert-dismissible fade show");
+         $('#alertz').append(stuff);
+         $('body, html').animate({
+             scrollTop: $('#focus').offset().top
+         });
+         $('#ikuzo').addClass("disabled");
+     }
+ }
+
+ function getTek() {
+     return function () {
+
+
+         return val;
+     };
+ }

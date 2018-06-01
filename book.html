@@ -15,34 +15,19 @@
     <!-- Main navigation -->
     <header>
         <!--Navbar-->
-        <strong>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar black-text">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="source/image/30%20dblogo.png" height="30" alt="" class="d-inline-block align-top"> Deutsche Bahn </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span> </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Facilities</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Book Ticket</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Profile</a>
-                    </li>
-                </ul>
-                <div class="text-center">
-                    <a href="" class="btn btn-danger btn-rounded" data-toggle="modal" data-target="#darkModalForm">Sign In</a>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top black-text bg-faded scrolling-navbar">
+            <div class="container"> <a class="navbar-brand" href="index.html"><img src="source/image/30%20dblogo.png" height="30" alt="" class="d-inline-block align-top"> Deutsche Bahn </a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active"> <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span> </a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="features.html">Facilities</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="index.html#searchtik">Book Ticket</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="contact-us.html">Contact Us</a> </li>
+                    </ul>
+                    <div class="text-center"> <a href="" class="btn btn-danger btn-rounded" data-toggle="modal" data-target="#darkModalForm">Sign In</a> </div>
                 </div>
             </div>
-        </nav> 
-        </strong>
+        </nav>
         <div class="row mt-5"></div>
         <div class="row mt-5"></div>
         <div class="container">
@@ -65,7 +50,7 @@
                 <div class="col-md-8 steps-form-2 white-text text-center">
                     <div class="steps-row-2 reserve d-flex justify-content-between disabled">
                         <div class="steps-step-2">
-                            <a href="#step-1" type="button" class="btn btn-amber wea btn-circle-2 waves-effect ml-0" data-toggle="tooltip" data-placement="top" title="New/Existing Account"><i class="fa fa-hourglass-start" aria-hidden="true"></i></a>
+                            <a href="#step-1" type="button" class="btn btn-amber wea btn-circle-2 waves-effect ml-0 active" data-toggle="tooltip" data-placement="top" title="New/Existing Account"><i class="fa fa-hourglass-start" aria-hidden="true"></i></a>
                         </div>
                         <div class="steps-step-2">
                             <a href="#step-2" type="button" class="btn btn-blue-grey wea btn-circle-2 waves-effect" data-toggle="tooltip" data-placement="top" title="Personal Data"><i class="fa fa-pencil" aria-hidden="true"></i></a>
@@ -82,11 +67,16 @@
                     <form role="form" action="" method="post" id="payment" onsubmit="return validateDate()">
                         <div class="wow shitbrix" id="step-1" data-wow-delay="0.3s"> <a class="btn btn-red btn-lg" data-toggle="modal" data-target="#darkModalForm">I have an Account</a>
                             <button class="btn btn-lg btn-white lanjut" type="button">New Reservation</button> </div>
-                        <div class="wow shitbrix black-text" id="step-2">
+                        <div class="wow shitbrix black-text" id="step-3">
                             <div class="col-md-12">
-                                <blockquote class="blockquote bq-warning">
+                                <blockquote class="blockquote bq-warning" id="warning">
                                     <p class="bq-title" style="font-size: 1rem;"><i class="fa fa-warning"></i> Heads up!</p>
-                                    <p style="font-size: 1rem;">Passenger details must be written as on ID card/passport/driving license.<br> Passenger details cannot be changed after leaving this page, double-check!</p>
+                                    <p style="font-size: 1rem;" id='focus' >Passenger details must be written as on ID card/passport/driving license.<br> Passenger details cannot be changed after leaving this page, double-check!</p>
+                                    <div class="" id='alertz' role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
                                 </blockquote>
                             </div>
                             <div id="passenjer">
@@ -102,7 +92,7 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div class="md-form form-group">
-                                            <input type="text" class="form-control" id="inputname1" placeholder="Full Name">
+                                            <input type="text" required class="form-control" id="inputname1" placeholder="Full Name">
                                             <label for="inputname1">Name</label>
                                         </div>
                                     </div>
@@ -119,7 +109,7 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div class="md-form form-group">
-                                            <input type="text" class="form-control" id="inputid1" placeholder="Type your ID Number">
+                                            <input type="text" required class="form-control" id="inputid1" placeholder="Type your ID Number">
                                             <label for="inputid1">ID Number</label>
                                         </div>
                                     </div>
@@ -131,9 +121,10 @@
 
                             <p>&nbsp;</p>
                             <p>&nbsp;</p>
-                            <button class="btn btn-mdb-color btn-rounded balik float-left" type="button">Previous</button>
-                            <button class="btn btn-mdb-color btn-rounded center" type="button" onclick="addpass()" id="addanother">Add Another</button>
-                            <button class="btn btn-mdb-color btn-rounded lanjut float-right" type="button">Next</button>
+                            <button class="btn btn-red balik float-left" type="button">Previous</button>
+                            <button class="btn btn-red center" type="button" onclick="addpass()" id="addanother">Add Another</button>
+                                                    <button class="btn btn-red center" type="button" onclick="dick()">Validate</button>
+                            <button class="btn btn-red lanjut ea float-right disabled" id="ikuzo" type="button">Next</button>
                         </div>
 
 
@@ -143,7 +134,7 @@
 
                 </div>
                 <div class="col-md-12 steps-form-2 white-text text-center">
-                    <div class="wow shitbrix black-text" id="step-3">
+                    <div class="wow shitbrix black-text" id="step-2">
                         <table class="table table-responsive-md">
 
                             <!--Table head-->
@@ -166,7 +157,7 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <input type="checkbox" class="filled-in" id="checkbox125">
+                                        <input type="checkbox" name="ckboxtrain" class="filled-in" id="checkbox125">
                                         <label for="checkbox125" class="label-table"></label>
                                     </td>
                                     <th scope="row">1</th>
@@ -180,7 +171,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input type="checkbox" class="filled-in" id="checkbox126">
+                                        <input type="checkbox" name="ckboxtrain" class="filled-in" id="checkbox126">
                                         <label for="checkbox126" class="label-table"></label>
                                     </td>
                                     <th scope="row">1</th>
@@ -194,7 +185,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input type="checkbox" class="filled-in" id="checkbox127">
+                                        <input type="checkbox" name="ckboxtrain" class="filled-in" id="checkbox127">
                                         <label for="checkbox127" class="label-table"></label>
                                     </td>
                                     <th scope="row">1</th>
@@ -211,8 +202,8 @@
 
 
                         </table>
-                        <button class="btn btn-mdb-color btn-rounded balik float-left" type="button">Previous</button>
-                        <button class="btn btn-mdb-color btn-rounded lanjut float-right" type="button">Next</button>
+                        <button class="btn btn-red balik float-left" type="button">Previous</button>
+                        <button class="btn btn-red lanjut float-right" type="button">Next</button>
                     </div>
                 </div>
 
@@ -318,11 +309,11 @@
                                 </div>
                             </div>
                             <div class="col-md-2">
-                                <button class="btn btn-mdb-color btn-rounded balik float-left" type="button">Previous</button>
+                                <button class="btn btn-red balik float-left" type="button">Previous</button>
                             </div>
                             <div class="col-md-4 mb-3">
 
-                                <button class="btn btn-mdb-color btn-rounded lanjut float-right" type="submit">Checkout</button>
+                                <button class="btn btn-red lanjut float-right" type="submit">Checkout</button>
 
                             </div>
                         </div>
@@ -330,7 +321,7 @@
                         </form>
                     </div>
                     <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-                        <button id="fixed-action-btn" type="button" class="btn btn-floating btn-large red" data-toggle="modal" data-target="#modalCart"><i class="fa fa-shopping-cart"></i></button>
+                        <button id="fixed-action-btn" type="button" class="btn btn-floating btn-large red" data-toggle="modal" data-target="#modalCart" onclick="cekot()"><i class="fa fa-shopping-cart"></i></button>
                     </div>
                 </div>
 
@@ -340,6 +331,7 @@
 
             <div class="col-md-2"></div>
             <!--Grid row-->
+
         </div>
         <!-- Content -->
         </div>
@@ -372,19 +364,14 @@
                                 <th>Price</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Nambo Jaya</td>
-                                <td>4 Passenger</td>
-                                <td>EUR 6000</td>
-                            </tr>
+                        <tbody class="yo" id="cekotlist">
+
                         </tbody>
                     </table>
                 </div>
                 <!--Footer-->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal" onclick='removecekot()'>Close</button>
                 </div>
             </div>
         </div>
@@ -428,7 +415,17 @@
             <!--/.Content-->
         </div>
     </div>
+
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="source/js/mdb.min.js" type="text/javascript"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="source/js/main.js"></script>
     <script>
+        var konterseleksien;
         $('#titel').addClass('animated fadeInUp');
         $('#titel').one('webkitAnimationEnd animationend', $('#shit').addClass('animated fadeInUp'));
         $('#shit').one('webkitAnimationEnd animationend', $('#step-1').addClass('animated fadeInUp'));
@@ -439,7 +436,6 @@
         $(function() {
             $('[data-toggle="tooltip"]').tooltip()
         })
-
         // Steppers                
         $(document).ready(function() {
             var navListItems = $('div.reserve div a'),
@@ -464,6 +460,25 @@
 
             });
 
+//function valthisform()
+//{
+//    var checkboxs=document.getElementsByName("ckboxtrain");
+//    var isValid=false;
+//    for(var i=0,l=checkboxs.length;i<l;i++)
+//    {
+//        if(checkboxs[i].checked)
+//        {
+//            isValid=true;
+//            break;
+//        }
+//    }
+//    if(isValid==true){
+//        
+//    }else{
+//        alert("Please check a checkbox");
+//    }
+//};
+
             allPrevBtn.click(function() {
                 var curStep = $(this).closest(".shitbrix"),
                     curStepBtn = curStep.attr("id"),
@@ -484,7 +499,7 @@
                         yombreng.removeClass("active");
                         break;
                     case 'step-4':
-                        shitext.text("Checkout");
+                        shitext.text("Personal Information");
                         yombreng.removeClass("active");
                         break;
 
@@ -496,21 +511,23 @@
                 var curStep = $(this).closest(".shitbrix"),
                     curStepBtn = curStep.attr("id"),
                     shitext = $('#shit'),
+                    regex = /^[a-zA-Z]*$/,
+                    numgex = /^\d+$/,
+                    checkboxs=document.getElementsByName("ckboxtrain"),
                     yombreng = $('div.reserve div a[href="#' + curStepBtn + '"]'),
                     nextStepSteps = $('div.reserve div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
                     curInputs = curStep.find("input[type='text'],input[type='url']"),
                     isValid = true;
+                
                 switch (curStepBtn) {
                     case 'step-1':
-                        shitext.fadeToggle();
-                        shitext.fadeIn();
-                        shitext.text("Personal Information");
-                        break;
-                    case 'step-2':
+                        konterseleksien = 'noticket';
                         shitext.fadeToggle();
                         shitext.fadeIn();
                         shitext.text("Ticket Selection");
-                        yombreng.addClass("active");
+                        break;
+                    case 'step-2':
+                        konterseleksien = 'ticket';
                         break;
                     case 'step-3':
                         shitext.text("Checkout");
@@ -527,23 +544,39 @@
                         $(curInputs[i]).closest(".form-group").addClass("has-error");
                     }
                 }
+if(konterseleksien == 'ticket'){ 
+        var we=1;
+    for(var i=0,l=checkboxs.length;i<l;i++)
+        {
+        if(checkboxs[i].checked)
+            {
+            isValid=true;
+                shitext.fadeToggle();
+                shitext.fadeIn();
+                shitext.text("Personal Information");
+                yombreng.addClass("active");
+            break;
+            }
+        else    {
+            isValid=false;
 
+        }
+        }
+    if(isValid){}
+    else alert("Please check a checkbox");
+    }
+
+
+
+                
                 if (isValid)
                     nextStepSteps.removeAttr('disabled').trigger('click');
             });
-
             $('div.reserve div a.btn-amber').trigger('click');
         });
-
+        
+        
     </script>
-
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="source/js/mdb.min.js" type="text/javascript"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script src="source/js/main.js"></script>
 </body>
 
 </html>

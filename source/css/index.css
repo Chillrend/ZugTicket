@@ -173,3 +173,7 @@ nav a{
 #custom {
 margin-top: 2.5em !important;
 }
+
+select:invalid{
+    border-bottom-color: red;
+}
