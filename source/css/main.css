@@ -71,3 +71,24 @@ nav{
 .modal-dialog,.form-dark{
     z-index: 2000;
 }
+.chip.chip-lg {
+    height: 52px;
+    line-height: 52px;
+    border-radius: 26px;
+}
+.blockquote .bq-title{
+    font-size: 1rem !important;
+}
+.blockquote p{
+    font-size: 1rem !important;
+}
+.md-form input:invalid{
+    border-bottom-color: #F44336 !important;
+}
+.justify{
+    text-align: justify;
+    text-justify: inter-word;
+}
+.tab-pane h5{
+    font-weight: 500;
+}
