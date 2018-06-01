@@ -10,7 +10,11 @@ already do:
 SHIT, IT WAS NEAT
 
 already yesn't/bug/lazystuff:
-- FIX THAT UGLY BUTTON PLS
-- LOL I FORGOT THAT CHECKOUT BUTTON EXISTS
-- VALIDATION STUFF
+- VALIDATION
 
+Fixed :
+- Modal
+- UI Clutter
+
+Pls fix :
+- Book Order (as explained on issue)
